@@ -102,3 +102,9 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Go binaries
+greeter/greeter
+
+# Build scripts
+docker-build.sh
