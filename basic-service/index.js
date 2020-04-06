@@ -6,6 +6,7 @@ const axios = require('axios').default;
 app.use(express.json());
 
 const adderURL = process.env.ADDER_URL || 'localhost'
+const delay = process.env.DELAY || 100
 
 app.get("/add/:num1/:num2", (req, res) => {
   const num1 = Number(req.params.num1);
@@ -32,8 +33,10 @@ app.post("/double", async (req, res) => {
 });
 
 app.post("/logger", (req, res) => {
-  console.log("Received an event:\n", JSON.stringify(req.body, null, 2))
-  res.status(200).send(JSON.stringify({}));
+  setTimeout(() => {
+    console.log("Received an event:\n", JSON.stringify(req.body, null, 2))
+    res.status(200).send(JSON.stringify(req.body));
+  }, delay)
 });
 
 var server = app.listen(8080, () => {
