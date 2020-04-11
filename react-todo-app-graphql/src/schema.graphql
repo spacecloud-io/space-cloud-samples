@@ -1,0 +1,14 @@
+type todos {
+  _id: ID! @primary
+  value: String!
+  isCompleted: Boolean @default(value: false)
+  userId: ID! @foreign(table: "users", field: "id")
+}
+
+type users {
+  _id: ID! @primary
+  email: String!
+  name: String!
+  pass: String
+  role: String
+}

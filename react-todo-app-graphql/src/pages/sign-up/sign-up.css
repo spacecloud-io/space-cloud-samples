@@ -1,0 +1,70 @@
+.sign-up {
+  height: 100vh;
+  background-color: #EEE;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+}
+
+.sign-up .content {
+  position: relative;
+  top: 15%;
+}
+
+.sign-up .content .logo {
+  margin-bottom: 32px;
+}
+
+.sign-up .content .sign-up-form {
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  background-color: #FFF;
+  padding: 24px 32px;
+  border-radius: 20px;
+}
+
+.sign-up .content .heading {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.sign-up input[type=text] {
+  width: 100%;
+  margin-bottom: 16px;
+  height: 32px;
+}
+
+.sign-up .sign-up-button {
+  background-color: #FF6700;
+  color: #FFF;
+  border: none;
+  border-radius: 5px;
+  width: 72px;
+  height: 28px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.sign-up .already-have-account {
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+#orange {
+  color: #FF6700;
+  cursor: pointer;
+  padding-left: 8px;
+}
+
+@media screen and (min-width:800px){
+  .sign-up .content .sign-up-form {
+    left: 30%;
+    right: 30%;
+  }
+
+  .sign-up .already-have-account {
+    font-size: 14px;
+  }
+}

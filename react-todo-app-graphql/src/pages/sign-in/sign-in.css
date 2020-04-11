@@ -1,0 +1,68 @@
+.sign-in {
+  height: 100vh;
+  background-color: #EEE;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+}
+
+.sign-in .content {
+  position: relative;
+  top: 15%;
+}
+
+.sign-in .content .logo {
+  margin-bottom: 32px;
+}
+
+.sign-in .content .sign-in-form {
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  background-color: #FFF;
+  padding: 24px 32px;
+  border-radius: 20px;
+}
+
+.sign-in .content .heading {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.sign-in input[type=text] {
+  width: 100%;
+  margin-bottom: 16px;
+  height: 32px;
+}
+
+.sign-in .sign-in-button {
+  background-color: #FF6700;
+  color: #FFF;
+  border: none;
+  border-radius: 5px;
+  width: 72px;
+  height: 28px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.sign-in .dont-have-account {
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+a{
+  text-decoration: none;
+}
+
+@media screen and (min-width:800px){
+  .sign-in .content .sign-in-form {
+    left: 30%;
+    right: 30%;
+  }
+
+  .sign-in .dont-have-account {
+    font-size: 14px;
+  }
+}
