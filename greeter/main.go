@@ -6,17 +6,27 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"strconv"
+	"time"
 
 	"github.com/gorilla/mux"
 )
 
 var greeting string = "hello"
+var delay int = 10
 
 func main() {
 	// Load the greeting from the environment variable
 	g := os.Getenv("GREETING")
 	if g != "" {
+		log.Println("Loading greeting:", g)
 		greeting = g
+	}
+
+	d := os.Getenv(("DELAY"))
+	if n, err := strconv.Atoi(d); err == nil {
+		log.Println("Loading delay:", n)
+		delay = n
 	}
 	// Set up the routes
 	r := mux.NewRouter()
@@ -33,6 +43,9 @@ func greetingHandler(w http.ResponseWriter, r *http.Request) {
 	// Get the name to greet
 	vars := mux.Vars(r)
 	name := vars["name"]
+
+	// Introduce a delay in response
+	time.Sleep(time.Duration(delay) * time.Second)
 
 	// Write response to client
 	w.WriteHeader(http.StatusOK)
