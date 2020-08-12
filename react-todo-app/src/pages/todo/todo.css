@@ -1,0 +1,53 @@
+.todo-app {
+  margin: 32px;
+}
+
+.todo-app input[type=text] {
+  height: 32px;
+  border-radius: 5px;
+  margin: 16px 16px 0 0;
+  border: 1px solid #BBB;
+  width: 70%;
+}
+
+.todo-app button {
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid #BBB;
+  background-color: #EEE;
+  padding: 2px 10px;
+}
+
+.todo-app .add-todo {
+  margin-bottom: 24px;
+}
+
+.todo-app .single-todo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.todo-app .todo-item{
+  padding: 0 16px 0 4px;
+}
+
+.todo-app .delete, .todo-app .checkbox{
+  cursor: pointer;
+}
+
+@media screen and (min-width: 800px) {
+  .todo-app {
+    margin: 32px 56px;
+  }
+
+  .todo-app .todo-flex {
+    display: flex;
+    align-items: center;
+  }
+
+  .todo-app input[type=text] {
+    margin: 0 16px 0 8px;
+    width: 300px;
+  }
+}
