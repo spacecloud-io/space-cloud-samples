@@ -45,7 +45,7 @@ func greetingHandler(w http.ResponseWriter, r *http.Request) {
 	name := vars["name"]
 
 	// Introduce a delay in response
-	time.Sleep(time.Duration(delay) * time.Second)
+	time.Sleep(time.Duration(delay) * time.Millisecond)
 
 	// Write response to client
 	w.WriteHeader(http.StatusOK)
